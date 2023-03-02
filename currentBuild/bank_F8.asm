@@ -6433,7 +6433,7 @@
                        dw stageNameText2f                   ;F8A1DA|        |F8A4D2;  
                        dw stageNameText30                   ;F8A1DC|        |F8A4E1;  
                        dw stageNameText31                   ;F8A1DE|        |F8A4ED;  
-                       dw stageNameText31                   ;F8A1E0|        |F8A4F9;  
+                       dw stageNameText32                   ;F8A1E0|        |F8A4F9;  
                                                             ;      |        |      ;  
         textPointer00: dw levelNameText00                   ;F8A1E2|        |F8A508;  
                        dw levelNameText01                   ;F8A1E4|        |F8A50D;  
@@ -6481,7 +6481,7 @@
                        dw levelNameText2b                   ;F8A238|        |F8A774;  
                        dw levelNameText2c                   ;F8A23A|        |F8A789;  
                        dw levelNameText2d                   ;F8A23C|        |F8A797;  
-                       dw levelNameText2d                   ;F8A23E|        |F8A7A6;  
+                       dw levelNameText2e                   ;F8A23E|        |F8A7A6;  
                        dw levelNameText2f                   ;F8A240|        |F8A7B8;  
                        dw levelNameText30                   ;F8A242|        |F8A7C6;  
                        dw levelNameText31                   ;F8A244|        |F8A7D5;  
@@ -6584,7 +6584,7 @@
                                                             ;      |        |      ;  
       stageNameText31: db "Funkys Fl^g", $E5                ;F8A4ED|        |      ;  
                                                             ;      |        |      ;  
-      stageNameText31: db "Candys Speiche", $F2             ;F8A4F9|        |      ;  
+      stageNameText32: db "Candys Speiche", $F2             ;F8A4F9|        |      ;  
                                                             ;      |        |      ;  
       levelNameText00: db "ERRO", $D2                       ;F8A508|        |      ;  
                                                             ;      |        |      ;  
@@ -6679,7 +6679,7 @@
                                                             ;      |        |      ;  
       levelNameText2d: db "Necky's Reveng", $E5             ;F8A797|        |      ;  
                                                             ;      |        |      ;  
-      levelNameText2d: db "Gang-Plank Galleo", $EE          ;F8A7A6|        |      ;  
+      levelNameText2e: db "Gang-Plank Galleo", $EE          ;F8A7A6|        |      ;  
                                                             ;      |        |      ;  
       levelNameText2f: db "Cranky's Cabi", $EE              ;F8A7B8|        |      ;  
                                                             ;      |        |      ;  

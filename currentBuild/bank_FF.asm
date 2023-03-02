@@ -7883,7 +7883,7 @@
                        TXY                                  ;FFA5E8|9B      |      ;  
                        ASL A                                ;FFA5E9|0A      |      ;  
                        TAX                                  ;FFA5EA|AA      |      ;  
-                       LDA.L UNREACH_BFA5FE,X               ;FFA5EB|BFFEA5BF|BFA5FE;  
+                       LDA.L DATA16_BFA5FE,X                ;FFA5EB|BFFEA5BF|BFA5FE;  
                        TYX                                  ;FFA5EF|BB      |      ;  
                        BIT.W $1208,X                        ;FFA5F0|3C0812  |BE1208;  
                        BMI CODE_FFA5F9                      ;FFA5F3|3004    |FFA5F9;  
@@ -7893,8 +7893,9 @@
           CODE_FFA5F9: STA.W $123D,X                        ;FFA5F9|9D3D12  |BE123D;  
                        CLC                                  ;FFA5FC|18      |      ;  
                        RTS                                  ;FFA5FD|60      |      ;  
-                       db $00,$00,$80,$00,$00,$01,$80,$01   ;FFA5FE|        |      ;  
-                       db $F0,$01,$80,$02,$00,$04           ;FFA606|        |FFA609;  
+                                                            ;      |        |      ;  
+      slopeSpeedTable: dw $0000,$0080,$0100,$0180           ;FFA5FE|        |      ;  
+                       dw $01F0,$0280,$0400                 ;FFA606|        |      ;  
                                                             ;      |        |      ;  
           CODE_FFA60C: BIT.W $1208,X                        ;FFA60C|3C0812  |BE1208;  
                        BMI UNREACH_FFA625                   ;FFA60F|3014    |FFA625;  

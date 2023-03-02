@@ -657,7 +657,7 @@
                        CODE_B8994E = $B8994E                ;      |        |      ;  
                        CODE_BF8573 = $BF8573                ;      |        |      ;  
                        CODE_818000 = $818000                ;      |        |      ;  
-                       UNREACH_BFA5FE = $BFA5FE             ;      |        |      ;  
+                       DATA16_BFA5FE = $BFA5FE              ;      |        |      ;  
                        CODE_B6A856 = $B6A856                ;      |        |      ;  
                        CODE_818003 = $818003                ;      |        |      ;  
                        CODE_BFB801 = $BFB801                ;      |        |      ;  

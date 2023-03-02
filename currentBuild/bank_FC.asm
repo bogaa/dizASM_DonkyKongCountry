@@ -1680,7 +1680,10 @@
                        db "selbst wen", $EE, "Ihr die Ha"   ;FC425B|        |      ;  
                        db "uptdarsteller w\ret", $A1, $00   ;FC4270|        |      ;  
                                                             ;      |        |      ;  
-          TEXT_FC4285: db "Ich w^rde "Game Over""           ;FC4285|        |      ;  
+          TEXT_FC4285: db "Ich w^rde "                      ;FC4285|        |      ;  
+                       db $22                               ;FC428F|        |      ; bug with quotes
+                       db "Game Over"                       ;FC4290|        |      ;  
+                       db $22                               ;FC4299|        |      ;  
                        db " i", $EE, "diesem Spiel nie z"   ;FC429A|        |      ;  
                        db $F5, "sehen kriegen", $A1, $00    ;FC42AF|        |      ;  
                                                             ;      |        |      ;  
@@ -1971,10 +1974,11 @@
                        db "! Ich mu", $DF, "erstmal ein "   ;FC5268|        |      ;  
                        db "Nickerchen machen", $A1, $00     ;FC527D|        |      ;  
                                                             ;      |        |      ;  
-          TEXT_FC5290: db "Wi_t Ihr noch, "Donke"           ;FC5290|        |      ;  
-                       db "y Kong", $A2, "im Original? D"   ;FC52A5|        |      ;  
-                       db "as ware", $EE, "noch Zeiten.."   ;FC52BA|        |      ;  
-                       db ".", $A1, $00                     ;FC52CF|        |      ;  
+          TEXT_FC5290: db "Wi_t Ihr noch, "                 ;FC5290|        |      ;  
+                       db $22                               ;FC529F|        |      ; bug with quotes
+                       db "Donkey Kong", $A2, "im Origin"   ;FC52A0|        |      ;  
+                       db "al? Das ware", $EE, "noch Zei"   ;FC52B5|        |      ;  
+                       db "ten...", $A1, $00                ;FC52CA|        |      ;  
                                                             ;      |        |      ;  
           TEXT_FC52D2: db "Ihr werdet diese l\ch"           ;FC52D2|        |      ;  
                        db "erlich", $E5, "Aufgabe ja woh"   ;FC52E7|        |      ;  

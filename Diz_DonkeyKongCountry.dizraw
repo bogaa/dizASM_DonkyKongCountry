@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectXmlSerializer-Root xmlns:exs="https://extendedxmlserializer.github.io/v2" xmlns:ns1="clr-namespace:Diz.Core.model;assembly=Diz.Core" xmlns:ns2="clr-namespace:Diz.Core.model.snes;assembly=Diz.Core" xmlns:sys="https://extendedxmlserializer.github.io/system" xmlns:ns3="clr-namespace:IX.Observable;assembly=IX.Observable" xmlns:ns4="clr-namespace:Diz.Core.export;assembly=Diz.Core" SaveVersion="101" Watermark="DiztinGUIsh" Extra1="" Extra2="" xmlns="clr-namespace:Diz.Core.serialization.xml_serializer;assembly=Diz.Core">
-  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizASM_DKC\.bkp\Donkey Kong Country (U) (V1.0) [!].smc" InternalRomGameName="DONKEY KONG COUNTRY  " InternalCheckSum="4018147455" CurrentViewOffset="3933082">
+  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizASM_DonkyKongCountry\.bkp\Donkey Kong Country (U) (V1.0) [!].smc" InternalRomGameName="DONKEY KONG COUNTRY  " InternalCheckSum="4018147455" CurrentViewOffset="3953270">
     <LogWriterSettings Format="%label:-22% %code:37%;%pc%|%bytes%|%ia%; %comment%" DataPerLine="8" Unlabeled="ShowInPoints" Structure="OneBankPerFile" IncludeUnusedLabels="false" PrintLabelSpecificComments="false" OutputExtraWhitespace="true" RomSizeOverride="-1" FileOrFolderOutPath="C:\GitHub\.dizProjects\dizASM_DKC\currentBuild" OutputToString="false" ErrorFilename="errors.txt" />
     <Data RomMapMode="HiRom" RomSpeed="FastRom">
       <Comments AutomaticallyCaptureSubItems="false" HistoryLevels="50">
         <sys:Item Key="16564892" Value="table of secrets to discover in levels" />
         <sys:Item Key="16515631" Value="pointer??" />
+        <sys:Item Key="16536223" Value="bug with quotes" />
       </Comments>
       <Labels>
         <sys:Item Key="2">
@@ -459,7 +460,7 @@
           <Value exs:type="ns1:Label" Name="levelNameText2d" Comment="" />
         </sys:Item>
         <sys:Item Key="16295846">
-          <Value exs:type="ns1:Label" Name="levelNameText2d" Comment="" />
+          <Value exs:type="ns1:Label" Name="levelNameText2e" Comment="" />
         </sys:Item>
         <sys:Item Key="16295864">
           <Value exs:type="ns1:Label" Name="levelNameText2f" Comment="" />
@@ -627,7 +628,7 @@
           <Value exs:type="ns1:Label" Name="stageNameText31" Comment="" />
         </sys:Item>
         <sys:Item Key="16295161">
-          <Value exs:type="ns1:Label" Name="stageNameText31" Comment="" />
+          <Value exs:type="ns1:Label" Name="stageNameText32" Comment="" />
         </sys:Item>
         <sys:Item Key="16613836">
           <Value exs:type="ns1:Label" Name="ReptileRumbleLevelData" Comment="" />
@@ -637,6 +638,9 @@
         </sys:Item>
         <sys:Item Key="16294913">
           <Value exs:type="ns1:Label" Name="stageNameText21" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16754174">
+          <Value exs:type="ns1:Label" Name="slopeSpeedTable" Comment="" />
         </sys:Item>
       </Labels>
       <RomBytes>
@@ -74812,7 +74816,9 @@ r 86 U
 +0BB
 r 20140 U
 r 968 E0FC
-r 21618 T
+r 20183 T
+A
+r 1434 T
 r 22535 U
 +0BC
 .0BC
@@ -95985,7 +95991,7 @@ r 15 U
 .0BE
 +0BE
 +0BE
-r 14 U
+r 14 B
 +0BE
 .0BE
 .0BE
