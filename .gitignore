@@ -1,2 +1,4 @@
+*.sfc
+*.smc
 .bkp
 currentBuild\asar 
