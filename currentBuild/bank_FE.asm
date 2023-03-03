@@ -4101,7 +4101,7 @@
                        PHK                                  ;FE8001|4B      |      ;  
                        PLB                                  ;FE8002|AB      |      ;  
                        LDX.B rNorSpr_CurrentIndex           ;FE8003|A682    |000082;  
-                       LDA.B $28                            ;FE8005|A528    |000028;  
+                       LDA.B rFrameCounter00                ;FE8005|A528    |000028;  
                        LSR A                                ;FE8007|4A      |      ;  
                        CLC                                  ;FE8008|18      |      ;  
                        ADC.W $14F9,X                        ;FE8009|7DF914  |BE14F9;  
@@ -5334,7 +5334,7 @@
                        STA.W $1699,Y                        ;FE9263|999916  |BE1699;  
                        RTL                                  ;FE9266|6B      |      ;  
                        LDY.B $84                            ;FE9267|A484    |000084;  
-                       LDA.B $28                            ;FE9269|A528    |000028;  
+                       LDA.B rFrameCounter00                ;FE9269|A528    |000028;  
                        SEC                                  ;FE926B|38      |      ;  
                        SBC.W $16A1,Y                        ;FE926C|F9A116  |BE16A1;  
                        CMP.W #$0014                         ;FE926F|C91400  |      ;  
@@ -7565,10 +7565,10 @@
           CODE_FEBDE3: LDA.B $76                            ;FEBDE3|A576    |000076;  
                        CMP.W #$0380                         ;FEBDE5|C98003  |      ;  
                        BNE CODE_FEBDFF                      ;FEBDE8|D015    |FEBDFF;  
-                       LDA.B $28                            ;FEBDEA|A528    |000028;  
+                       LDA.B rFrameCounter00                ;FEBDEA|A528    |000028;  
                        AND.W #$0003                         ;FEBDEC|290300  |      ;  
                        BNE CODE_FEBDFF                      ;FEBDEF|D00E    |FEBDFF;  
-                       LDA.B $28                            ;FEBDF1|A528    |000028;  
+                       LDA.B rFrameCounter00                ;FEBDF1|A528    |000028;  
                        AND.W #$0004                         ;FEBDF3|290400  |      ;  
                        BEQ CODE_FEBE00                      ;FEBDF6|F008    |FEBE00;  
                        LDY.W #$8663                         ;FEBDF8|A06386  |      ;  
@@ -7583,7 +7583,7 @@
           CODE_FEBE08: LDA.B $76                            ;FEBE08|A576    |000076;  
                        CMP.W #$0400                         ;FEBE0A|C90004  |      ;  
                        BNE CODE_FEBDFF                      ;FEBE0D|D0F0    |FEBDFF;  
-                       LDA.B $28                            ;FEBE0F|A528    |000028;  
+                       LDA.B rFrameCounter00                ;FEBE0F|A528    |000028;  
                        AND.W #$0003                         ;FEBE11|290300  |      ;  
                        BNE CODE_FEBDFF                      ;FEBE14|D0E9    |FEBDFF;  
                        LDY.W #$8663                         ;FEBE16|A06386  |      ;  
@@ -8403,7 +8403,7 @@
                        LDA.W $1699,X                        ;FED21B|BD9916  |BE1699;  
                        AND.W #$FEFF                         ;FED21E|29FFFE  |      ;  
                        STA.W $1699,X                        ;FED221|9D9916  |BE1699;  
-                       LDA.B $28                            ;FED224|A528    |000028;  
+                       LDA.B rFrameCounter00                ;FED224|A528    |000028;  
                        SEC                                  ;FED226|38      |      ;  
                        SBC.W $16A5,X                        ;FED227|FDA516  |BE16A5;  
                        BMI CODE_FED266                      ;FED22A|303A    |FED266;  

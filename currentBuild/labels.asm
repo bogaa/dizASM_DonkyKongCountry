@@ -1,4 +1,7 @@
                        rMAP_currentPathID = $000002         ;      |        |      ;  
+                       rFrameCounter00 = $000028            ;      |        |      ;  
+                       rFrameCounter01 = $00002A            ;      |        |      ;  
+                       rGameModePointer = $00002C           ;      |        |      ;  
                        rEntranceID = $00003E                ;      |        |      ;  
                        rNorSpr_CurrentIndex = $000082       ;      |        |      ;  
                        rOAMIndex = $00008E                  ;      |        |      ;  
@@ -179,6 +182,7 @@
                        CODE_B8B529 = $B8B529                ;      |        |      ;  
                        CODE_B88708 = $B88708                ;      |        |      ;  
                        CODE_BBA849 = $BBA849                ;      |        |      ;  
+                       CODE_BCB38E = $BCB38E                ;      |        |      ;  
                        CODE_B6A84B = $B6A84B                ;      |        |      ;  
                        UNREACH_80A543 = $80A543             ;      |        |      ;  
                        UNREACH_80A545 = $80A545             ;      |        |      ;  
@@ -460,6 +464,7 @@
                        CODE_B899DA = $B899DA                ;      |        |      ;  
                        UNREACH_BCBEF0 = $BCBEF0             ;      |        |      ;  
                        UNREACH_BCBEF2 = $BCBEF2             ;      |        |      ;  
+                       CODE_B89A60 = $B89A60                ;      |        |      ;  
                        CODE_BCBBBA = $BCBBBA                ;      |        |      ;  
                        CODE_BCB963 = $BCB963                ;      |        |      ;  
                        CODE_808159 = $808159                ;      |        |      ;  
@@ -481,6 +486,9 @@
                        UNREACH_B89855 = $B89855             ;      |        |      ;  
                        UNREACH_B89853 = $B89853             ;      |        |      ;  
                        UNREACH_BCC288 = $BCC288             ;      |        |      ;  
+                       CODE_B89E78 = $B89E78                ;      |        |      ;  
+                       LOOSE_OP_009CC3 = $009CC3            ;      |        |      ;  
+                       UNREACH_B89EE8 = $B89EE8             ;      |        |      ;  
                        PTR16_B8A17A = $B8A17A               ;      |        |      ;  
                        UNREACH_B8A07A = $B8A07A             ;      |        |      ;  
                        CODE_B8B7CF = $B8B7CF                ;      |        |      ;  
@@ -540,12 +548,19 @@
                        CODE_BBA594 = $BBA594                ;      |        |      ;  
                        CODE_BBA66A = $BBA66A                ;      |        |      ;  
                        CODE_BBA845 = $BBA845                ;      |        |      ;  
-                       UNREACH_BB8080 = $BB8080             ;      |        |      ;  
+                       LOOSE_OP_808080 = $808080            ;      |        |      ;  
                        UNREACH_BBAA40 = $BBAA40             ;      |        |      ;  
                        UNREACH_BBAA44 = $BBAA44             ;      |        |      ;  
                        UNREACH_BC8000 = $BC8000             ;      |        |      ;  
                        UNREACH_BCB0B1 = $BCB0B1             ;      |        |      ;  
                        UNREACH_BCB0B3 = $BCB0B3             ;      |        |      ;  
+                       CODE_BFDAE8 = $BFDAE8                ;      |        |      ;  
+                       CODE_BBA74D = $BBA74D                ;      |        |      ;  
+                       CODE_BBA71D = $BBA71D                ;      |        |      ;  
+                       CODE_BBA6EF = $BBA6EF                ;      |        |      ;  
+                       CODE_BBA6FE = $BBA6FE                ;      |        |      ;  
+                       UNREACH_BCB3DE = $BCB3DE             ;      |        |      ;  
+                       UNREACH_BCB3DF = $BCB3DF             ;      |        |      ;  
                        UNREACH_BCBA68 = $BCBA68             ;      |        |      ;  
                        UNREACH_BCBA69 = $BCBA69             ;      |        |      ;  
                        UNREACH_BCBA67 = $BCBA67             ;      |        |      ;  

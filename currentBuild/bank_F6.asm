@@ -4400,7 +4400,7 @@
                        JSL.L CODE_BBA574                    ;F6838B|2274A5BB|BBA574;  
                        BCS CODE_F683D2                      ;F6838F|B041    |F683D2;  
                        JSL.L CODE_BE80E1                    ;F68391|22E180BE|BE80E1;  
-                       LDA.B $28                            ;F68395|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F68395|A528    |000028;  
                        AND.W #$000F                         ;F68397|290F00  |      ;  
                        BNE CODE_F683CD                      ;F6839A|D031    |F683CD;  
                        LDY.W #$8C5F                         ;F6839C|A05F8C  |      ;  
@@ -5907,7 +5907,7 @@
                        DEC.W $13E9,X                        ;F69991|DEE913  |BE13E9;  
                        RTL                                  ;F69994|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_F69995: LDA.B $28                            ;F69995|A528    |000028;  
+          CODE_F69995: LDA.B rFrameCounter00                ;F69995|A528    |000028;  
                        AND.W #$003F                         ;F69997|293F00  |      ;  
                        BEQ CODE_F6999D                      ;F6999A|F001    |F6999D;  
                        RTL                                  ;F6999C|6B      |      ;  
@@ -5959,7 +5959,7 @@
                                                             ;      |        |      ;  
           CODE_F69A03: RTL                                  ;F69A03|6B      |      ;  
                        LDX.B rNorSpr_CurrentIndex           ;F69A04|A682    |000082;  
-                       LDA.B $28                            ;F69A06|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F69A06|A528    |000028;  
                        ASL A                                ;F69A08|0A      |      ;  
                        ASL A                                ;F69A09|0A      |      ;  
                        ASL A                                ;F69A0A|0A      |      ;  
@@ -6804,7 +6804,7 @@
                        LDA.W $16E9,Y                        ;F6A1D1|B9E916  |B616E9;  
                        AND.W #$8000                         ;F6A1D4|290080  |      ;  
                        BNE CODE_F6A1E7                      ;F6A1D7|D00E    |F6A1E7;  
-                       LDA.B $28                            ;F6A1D9|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F6A1D9|A528    |000028;  
                        SEC                                  ;F6A1DB|38      |      ;  
                        SBC.W $16A5,Y                        ;F6A1DC|F9A516  |B616A5;  
                        BMI CODE_F6A1E6                      ;F6A1DF|3005    |F6A1E6;  
@@ -8084,7 +8084,7 @@
                        XBA                                  ;F6ADB6|EB      |      ;  
                        AND.W #$00FF                         ;F6ADB7|29FF00  |      ;  
                        TAY                                  ;F6ADBA|A8      |      ;  
-                       LDA.B $28                            ;F6ADBB|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F6ADBB|A528    |000028;  
                        LSR A                                ;F6ADBD|4A      |      ;  
                        LSR A                                ;F6ADBE|4A      |      ;  
                        BCC CODE_F6ADC7                      ;F6ADBF|9006    |F6ADC7;  
@@ -9682,7 +9682,7 @@
           CODE_F6BA57: PHK                                  ;F6BA57|4B      |      ;  
                        PLB                                  ;F6BA58|AB      |      ;  
                        LDX.B rNorSpr_CurrentIndex           ;F6BA59|A682    |000082;  
-                       LDA.B $28                            ;F6BA5B|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F6BA5B|A528    |000028;  
                        SEC                                  ;F6BA5D|38      |      ;  
                        SBC.W #$0020                         ;F6BA5E|E92000  |      ;  
                        LSR A                                ;F6BA61|4A      |      ;  
@@ -10442,7 +10442,7 @@
                        JSR.W CODE_F69390                    ;F6C1A5|209093  |F69390;  
                        LDA.W $0BC1,X                        ;F6C1A8|BDC10B  |BE0BC1;  
                        STA.W $145D,X                        ;F6C1AB|9D5D14  |BE145D;  
-                       LDA.B $28                            ;F6C1AE|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F6C1AE|A528    |000028;  
                        ASL A                                ;F6C1B0|0A      |      ;  
                        AND.W #$000F                         ;F6C1B1|290F00  |      ;  
                        BIT.W #$0008                         ;F6C1B4|890800  |      ;  
@@ -12827,7 +12827,7 @@
                        LDA.W $0DED,X                        ;F6D8DB|BDED0D  |B60DED;  
                        BEQ CODE_F6D921                      ;F6D8DE|F041    |F6D921;  
                        DEC.W $0DED,X                        ;F6D8E0|DEED0D  |BE0DED;  
-                       LDA.B $28                            ;F6D8E3|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F6D8E3|A528    |000028;  
                        AND.W #$0001                         ;F6D8E5|290100  |      ;  
                        BNE CODE_F6D921                      ;F6D8E8|D037    |F6D921;  
                        LDY.W #$8C5F                         ;F6D8EA|A05F8C  |      ;  
@@ -14194,7 +14194,7 @@
           CODE_F6E609: JSL.L CODE_809B9C                    ;F6E609|229C9B80|809B9C;  
                        LDA.W $0B19,X                        ;F6E60D|BD190B  |BE0B19;  
                        CLC                                  ;F6E610|18      |      ;  
-                       ADC.B $28                            ;F6E611|6528    |000028;  
+                       ADC.B rFrameCounter00                ;F6E611|6528    |000028;  
                        AND.W #$0003                         ;F6E613|290300  |      ;  
                        BEQ CODE_F6E61C                      ;F6E616|F004    |F6E61C;  
                        JSL.L CODE_BFFA4D                    ;F6E618|224DFABF|BFFA4D;  
@@ -15576,7 +15576,7 @@
                        LDX.B rNorSpr_CurrentIndex           ;F6F717|A682    |000082;  
                        DEC.W $13E9,X                        ;F6F719|DEE913  |BD13E9;  
                        BMI CODE_F6F74A                      ;F6F71C|302C    |F6F74A;  
-                       LDA.B $28                            ;F6F71E|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F6F71E|A528    |000028;  
                        LSR A                                ;F6F720|4A      |      ;  
                        BCS CODE_F6F735                      ;F6F721|B012    |F6F735;  
                        LDA.W $13E9,X                        ;F6F723|BDE913  |BE13E9;  
@@ -15851,7 +15851,7 @@
                        LDA.W $1375,X                        ;F6F99F|BD7513  |B51375;  
                        CMP.W #$0006                         ;F6F9A2|C90600  |      ;  
                        BPL CODE_F6F9BB                      ;F6F9A5|1014    |F6F9BB;  
-                       LDA.B $28                            ;F6F9A7|A528    |000028;  
+                       LDA.B rFrameCounter00                ;F6F9A7|A528    |000028;  
                        AND.W #$0004                         ;F6F9A9|290400  |      ;  
                        BEQ CODE_F6F9BB                      ;F6F9AC|F00D    |F6F9BB;  
                        LDA.W #$0000                         ;F6F9AE|A90000  |      ;  
@@ -16021,7 +16021,7 @@
                        JSL.L CODE_BFFAF6                    ;F6FB33|22F6FABF|BFFAF6;  
                        JML.L CODE_BDF476                    ;F6FB37|5C76F4BD|BDF476;  
                                                             ;      |        |      ;  
-          CODE_F6FB3B: LDA.B $28                            ;F6FB3B|A528    |000028;  
+          CODE_F6FB3B: LDA.B rFrameCounter00                ;F6FB3B|A528    |000028;  
                        AND.W #$000F                         ;F6FB3D|290F00  |      ;  
                        BNE CODE_F6FB73                      ;F6FB40|D031    |F6FB73;  
                        LDY.W #$8C5F                         ;F6FB42|A05F8C  |      ;  

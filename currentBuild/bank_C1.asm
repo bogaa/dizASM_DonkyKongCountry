@@ -5883,7 +5883,7 @@
                        JMP.W CODE_C18FBB                    ;C18F15|4CBB8F  |C18FBB;  
                                                             ;      |        |      ;  
           CODE_C18F18: JSR.W CODE_C1927E                    ;C18F18|207E92  |C1927E;  
-                       LDA.B $28                            ;C18F1B|A528    |000028;  
+                       LDA.B rFrameCounter00                ;C18F1B|A528    |000028;  
                        BIT.W #$0001                         ;C18F1D|890100  |      ;  
                        BNE CODE_C18F48                      ;C18F20|D026    |C18F48;  
                        LDA.W $1DF3                          ;C18F22|ADF31D  |801DF3;  
@@ -5960,7 +5960,7 @@
                        STA.W $1DF5                          ;C18FB7|8DF51D  |801DF5;  
                        RTL                                  ;C18FBA|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_C18FBB: LDA.B $28                            ;C18FBB|A528    |000028;  
+          CODE_C18FBB: LDA.B rFrameCounter00                ;C18FBB|A528    |000028;  
                        INC A                                ;C18FBD|1A      |      ;  
                        BIT.W #$0007                         ;C18FBE|890700  |      ;  
                        BNE CODE_C18FF2                      ;C18FC1|D02F    |C18FF2;  
@@ -6103,7 +6103,7 @@
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C1926E|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C19276|        |      ;  
                                                             ;      |        |      ;  
-          CODE_C1927E: LDA.B $28                            ;C1927E|A528    |000028;  
+          CODE_C1927E: LDA.B rFrameCounter00                ;C1927E|A528    |000028;  
                        BIT.W #$0001                         ;C19280|890100  |      ;  
                        BNE CODE_C19288                      ;C19283|D003    |C19288;  
                        JMP.W CODE_C19326                    ;C19285|4C2693  |C19326;  
@@ -6361,7 +6361,7 @@
                        RTS                                  ;C19488|60      |      ;  
                        PEA.W CODE_81817F                    ;C19489|F47F81  |81817F;  
                        PLB                                  ;C1948C|AB      |      ;  
-                       LDA.B $28                            ;C1948D|A528    |000028;  
+                       LDA.B rFrameCounter00                ;C1948D|A528    |000028;  
                        AND.W #$0001                         ;C1948F|290100  |      ;  
                        BEQ CODE_C19497                      ;C19492|F003    |C19497;  
                        LDA.W #$0064                         ;C19494|A96400  |      ;  
@@ -6418,7 +6418,7 @@
                        BEQ CODE_C19529                      ;C19524|F003    |C19529;  
                        JMP.W CODE_C195B7                    ;C19526|4CB795  |C195B7;  
                                                             ;      |        |      ;  
-          CODE_C19529: LDA.B $28                            ;C19529|A528    |000028;  
+          CODE_C19529: LDA.B rFrameCounter00                ;C19529|A528    |000028;  
                        LSR A                                ;C1952B|4A      |      ;  
                        LSR A                                ;C1952C|4A      |      ;  
                        CLC                                  ;C1952D|18      |      ;  
@@ -6445,7 +6445,7 @@
                        STA.W $02FB,X                        ;C19567|9DFB02  |7F02FB;  
                        STA.W $030F,X                        ;C1956A|9D0F03  |7F030F;  
                        STA.W $0323,X                        ;C1956D|9D2303  |7F0323;  
-                       LDA.B $28                            ;C19570|A528    |000028;  
+                       LDA.B rFrameCounter00                ;C19570|A528    |000028;  
                        LSR A                                ;C19572|4A      |      ;  
                        LSR A                                ;C19573|4A      |      ;  
                        CLC                                  ;C19574|18      |      ;  
@@ -6473,7 +6473,7 @@
                        STA.W $0311,X                        ;C195B1|9D1103  |7F0311;  
                        STA.W $0325,X                        ;C195B4|9D2503  |7F0325;  
                                                             ;      |        |      ;  
-          CODE_C195B7: LDA.B $28                            ;C195B7|A528    |000028;  
+          CODE_C195B7: LDA.B rFrameCounter00                ;C195B7|A528    |000028;  
                        SEC                                  ;C195B9|38      |      ;  
                        SBC.L rLayer1YPos                    ;C195BA|EF950800|000895;  
                        AND.W #$003F                         ;C195BE|293F00  |      ;  
@@ -6536,7 +6536,7 @@
                        CMP.W #$002A                         ;C1963D|C92A00  |      ;  
                        BNE CODE_C196C1                      ;C19640|D07F    |C196C1;  
                                                             ;      |        |      ;  
-          CODE_C19642: LDA.B $28                            ;C19642|A528    |000028;  
+          CODE_C19642: LDA.B rFrameCounter00                ;C19642|A528    |000028;  
                        SEC                                  ;C19644|38      |      ;  
                        SBC.L rLayer1YPos                    ;C19645|EF950800|000895;  
                        AND.W #$003F                         ;C19649|293F00  |      ;  
@@ -6594,7 +6594,7 @@
                        ADC.B $4C                            ;C196BB|654C    |00004C;  
                        STA.L $001DF7                        ;C196BD|8FF71D00|001DF7;  
                                                             ;      |        |      ;  
-          CODE_C196C1: LDA.B $28                            ;C196C1|A528    |000028;  
+          CODE_C196C1: LDA.B rFrameCounter00                ;C196C1|A528    |000028;  
                        BIT.W #$0001                         ;C196C3|890100  |      ;  
                        BEQ CODE_C19741                      ;C196C6|F079    |C19741;  
                        LDX.W #$029D                         ;C196C8|A29D02  |      ;  
@@ -10698,7 +10698,7 @@
                        PLB                                  ;C1EEEB|AB      |      ;  
                        RTL                                  ;C1EEEC|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_C1EEED: LDA.B $28                            ;C1EEED|A528    |000028;  
+          CODE_C1EEED: LDA.B rFrameCounter00                ;C1EEED|A528    |000028;  
                        AND.W #$0001                         ;C1EEEF|290100  |      ;  
                        BEQ CODE_C1EF48                      ;C1EEF2|F054    |C1EF48;  
                        LDA.L $7F376D                        ;C1EEF4|AF6D377F|7F376D;  
