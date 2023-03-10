@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectXmlSerializer-Root xmlns:exs="https://extendedxmlserializer.github.io/v2" xmlns:ns1="clr-namespace:Diz.Core.model;assembly=Diz.Core" xmlns:ns2="clr-namespace:Diz.Core.model.snes;assembly=Diz.Core" xmlns:sys="https://extendedxmlserializer.github.io/system" xmlns:ns3="clr-namespace:IX.Observable;assembly=IX.Observable" xmlns:ns4="clr-namespace:Diz.Core.export;assembly=Diz.Core" SaveVersion="101" Watermark="DiztinGUIsh" Extra1="" Extra2="" xmlns="clr-namespace:Diz.Core.serialization.xml_serializer;assembly=Diz.Core">
-  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizASM_DonkyKongCountry\.bkp\Donkey Kong Country (U) (V1.0) [!].smc" InternalRomGameName="DONKEY KONG COUNTRY  " InternalCheckSum="4018147455" CurrentViewOffset="4184943">
+  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizASM_DonkyKongCountry\.bkp\Donkey Kong Country (U) (V1.0) [!].smc" InternalRomGameName="DONKEY KONG COUNTRY  " InternalCheckSum="4018147455" CurrentViewOffset="4030834">
     <LogWriterSettings Format="%label:-22% %code:37%;%pc%|%bytes%|%ia%; %comment%" DataPerLine="8" Unlabeled="ShowInPoints" Structure="OneBankPerFile" IncludeUnusedLabels="false" PrintLabelSpecificComments="false" OutputExtraWhitespace="true" RomSizeOverride="-1" FileOrFolderOutPath="currentBuild" OutputToString="false" ErrorFilename="errors.txt" />
     <Data RomMapMode="HiRom" RomSpeed="FastRom">
       <Comments AutomaticallyCaptureSubItems="false" HistoryLevels="50">
@@ -12,19 +12,55 @@
         <sys:Item Key="12635278" Value="load TitleScreen Pointer" />
         <sys:Item Key="12615885" Value="pause check" />
         <sys:Item Key="12615919" Value="pause mode" />
+        <sys:Item Key="12642752" Value="branch to copyright clime" />
+        <sys:Item Key="12642772" Value="branch to copyright clime" />
+        <sys:Item Key="16293503" Value="get text pointer " />
+        <sys:Item Key="16293507" Value="generate offset Pointer of the letters and store them in OAM" />
+        <sys:Item Key="16293123" Value="alphabet" />
+        <sys:Item Key="16292724" Value="X Y pos offset" />
+        <sys:Item Key="16293050" Value="read From Text Pointer in X " />
+        <sys:Item Key="16292969" Value="pull text pointer" />
+        <sys:Item Key="16292970" Value="setMaxSize??" />
+        <sys:Item Key="16293028" Value="readText" />
+        <sys:Item Key="16293031" Value="check if finished" />
+        <sys:Item Key="16292986" Value="get latter OAM ID" />
+        <sys:Item Key="16292997" Value="alphabet offset??" />
+        <sys:Item Key="16293000" Value="attribute" />
+        <sys:Item Key="16293018" Value="update current OAM slot" />
+        <sys:Item Key="16293003" Value="store tile ID in OAMtable" />
+        <sys:Item Key="16293011" Value="store possition in OAM Table" />
+        <sys:Item Key="16291114" Value="save progress table " />
+        <sys:Item Key="15439645" Value="??" />
+        <sys:Item Key="16745419" Value="unused??" />
+        <sys:Item Key="16170219" Value="unused??" />
+        <sys:Item Key="16642889" Value="WRAM read " />
+        <sys:Item Key="12615679" Value="end unused data" />
+        <sys:Item Key="12648367" Value="end unused" />
+        <sys:Item Key="12681215" Value="end unused " />
+        <sys:Item Key="12710888" Value="data pattern does not exits in V1.2 " />
+        <sys:Item Key="12713983" Value="end unused data " />
+        <sys:Item Key="12779519" Value="end unused" />
+        <sys:Item Key="13172735" Value="end unused" />
+        <sys:Item Key="13162945" Value="dublicate sound sample data from 7c030" />
+        <sys:Item Key="13264225" Value="end of bank containig graphics and tilemap of Vine Valley fragment of early graphics" />
+        <sys:Item Key="13697023" Value="end unused" />
+        <sys:Item Key="13893631" Value="end unused" />
+        <sys:Item Key="14155775" Value="end unused" />
+        <sys:Item Key="14221311" Value="end unused" />
+        <sys:Item Key="14483455" Value="end unused" />
       </Comments>
       <Labels>
         <sys:Item Key="2">
           <Value exs:type="ns1:Label" Name="rMAP_currentPathID" Comment="" />
+        </sys:Item>
+        <sys:Item Key="28">
+          <Value exs:type="ns1:Label" Name="rGameModePointer" Comment="" />
         </sys:Item>
         <sys:Item Key="40">
           <Value exs:type="ns1:Label" Name="rFrameCounter00" Comment="" />
         </sys:Item>
         <sys:Item Key="42">
           <Value exs:type="ns1:Label" Name="rFrameCounter01" Comment="" />
-        </sys:Item>
-        <sys:Item Key="44">
-          <Value exs:type="ns1:Label" Name="rGameModePointer" Comment="" />
         </sys:Item>
         <sys:Item Key="62">
           <Value exs:type="ns1:Label" Name="rEntranceID" Comment="" />
@@ -111,16 +147,22 @@
           <Value exs:type="ns1:Label" Name="rLevel_FreeMovementDebugFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="1336">
-          <Value exs:type="ns1:Label" Name="rLevelCompleationArray" Comment="" />
+          <Value exs:type="ns1:Label" Name="rLevel_CompleationArray" Comment="" />
         </sys:Item>
         <sys:Item Key="1373">
           <Value exs:type="ns1:Label" Name="rLevel_GiveBackAnimalBuddyFlag" Comment="" />
+        </sys:Item>
+        <sys:Item Key="1379">
+          <Value exs:type="ns1:Label" Name="rLevel_BackupEntrance" Comment="&#x9;" />
         </sys:Item>
         <sys:Item Key="1383">
           <Value exs:type="ns1:Label" Name="rCurrentLanguage" Comment="" />
         </sys:Item>
         <sys:Item Key="1387">
           <Value exs:type="ns1:Label" Name="rCheatCodeFlags" Comment="" />
+        </sys:Item>
+        <sys:Item Key="1388">
+          <Value exs:type="ns1:Label" Name="rFlags09PlusMusicMenuInSaveSelect" Comment=" " />
         </sys:Item>
         <sys:Item Key="1389">
           <Value exs:type="ns1:Label" Name="rFileSelect_WaitToFadeBackToIntroTimer" Comment="" />
@@ -325,6 +367,9 @@
         </sys:Item>
         <sys:Item Key="7665">
           <Value exs:type="ns1:Label" Name="rJungleWeatherEffects" Comment="" />
+        </sys:Item>
+        <sys:Item Key="7723">
+          <Value exs:type="ns1:Label" Name="rWinLoseFlags" Comment=" " />
         </sys:Item>
         <sys:Item Key="43368">
           <Value exs:type="ns1:Label" Name="Native_NMI" Comment="" />
@@ -690,7 +735,7 @@
           <Value exs:type="ns1:Label" Name="debuggData" Comment="" />
         </sys:Item>
         <sys:Item Key="16292930">
-          <Value exs:type="ns1:Label" Name="debuggText" Comment="" />
+          <Value exs:type="ns1:Label" Name="debuggText00" Comment="" />
         </sys:Item>
         <sys:Item Key="16560442">
           <Value exs:type="ns1:Label" Name="debugg_CamCollision" Comment="" />
@@ -698,10 +743,161 @@
         <sys:Item Key="12624320">
           <Value exs:type="ns1:Label" Name="debug_freeAirMovement" Comment="" />
         </sys:Item>
+        <sys:Item Key="12642848">
+          <Value exs:type="ns1:Label" Name="copyRightClaimRoutine" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16293496">
+          <Value exs:type="ns1:Label" Name="drawTextRoutine" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16493346">
+          <Value exs:type="ns1:Label" Name="OAM_DrawTable" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16293608">
+          <Value exs:type="ns1:Label" Name="OAM_Slot_OffsetTableX00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16293059">
+          <Value exs:type="ns1:Label" Name="characterTableOffset" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16292945">
+          <Value exs:type="ns1:Label" Name="debuggText01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16293037">
+          <Value exs:type="ns1:Label" Name="callculate_OAM_UpdateSize" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16291052">
+          <Value exs:type="ns1:Label" Name="loadLevelProgressionArrayFromWRAM" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16089164">
+          <Value exs:type="ns1:Label" Name="createEntityFromYPointer" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16170152">
+          <Value exs:type="ns1:Label" Name="entity_obj_WRAM_00_Bonus_pointer" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12844947">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="15439645">
+          <Value exs:type="ns1:Label" Name="opj_pointerStartHouse" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16744823">
+          <Value exs:type="ns1:Label" Name="obj_ID_AiExecuteTable" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16761285">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16758347">
+          <Value exs:type="ns1:Label" Name="whatRoutineIsThis00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16170253">
+          <Value exs:type="ns1:Label" Name="emptyRoutine_AI00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16642978">
+          <Value exs:type="ns1:Label" Name="check4EmtyIDSlot" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098641">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data04" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098603">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098653">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data05" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098591">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098615">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098627">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098665">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data06" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098677">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data07" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098576">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098629">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data03" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098575">
+          <Value exs:type="ns1:Label" Name="entitySpawning_DataXX" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098713">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data08" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098723">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data09" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098733">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data0a" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16098743">
+          <Value exs:type="ns1:Label" Name="entitySpawning_Data0b" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12614177">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12648065">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12648321">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12678330">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12710888">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle03" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12777453">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle04" Comment="" />
+        </sys:Item>
+        <sys:Item Key="12910002">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle05" Comment="" />
+        </sys:Item>
+        <sys:Item Key="13162945">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle06" Comment="" />
+        </sys:Item>
+        <sys:Item Key="13264225">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle07" Comment="" />
+        </sys:Item>
+        <sys:Item Key="13691004">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle08" Comment="" />
+        </sys:Item>
+        <sys:Item Key="13885865">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle09" Comment="" />
+        </sys:Item>
+        <sys:Item Key="14154300">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle0a" Comment="" />
+        </sys:Item>
+        <sys:Item Key="14216448">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="14216704">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="14216912">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle0b" Comment="" />
+        </sys:Item>
+        <sys:Item Key="14477792">
+          <Value exs:type="ns1:Label" Name="unused_data_Mattrizzle0c" Comment="" />
+        </sys:Item>
+        <sys:Item Key="16102419">
+          <Value exs:type="ns1:Label" Name="entity_rinoBox_Spawning_Data00" Comment="" />
+        </sys:Item>
       </Labels>
       <RomBytes>
 version:200,compress_groupblocks,compress_table_1
-r 32768 U
+r 27878 U
+UE
+r 3386 U
+AI
+r 1502 A
 +D
 +D
 +D
@@ -16143,34 +16339,34 @@ r 21 U
 .08
 .08
 +08
-+08
-.08
-+08
++E8
 .08
 +C8
 .C8
++C8
+.C8
+.C8
++G8
+.C8
+.C8
++C8
+.C8
++K8
+.C8
++C8
+.C8
++C8
 .C8
 +C8
 .C8
 .C8
 +C8
 .C8
-+C8
-.C8
-+C8
-.C8
-+C8
-.C8
-+C8
-.C8
-.C8
-+C8
-.C8
 .C8
 +C8
 +C8
 .C8
-+08
++E8
 .08
 .08
 +08
@@ -23161,7 +23357,177 @@ r 13 U
 +08
 .08
 +08
-r 190 U
++08
+.08
+.08
++I8
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++I8
+.08
+.08
+.08
++Y8
+.08
+.08
++08
+.08
+.08
++I8
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++I8
+.08
+.08
+.08
++Y8
+.08
+.08
++08
+.08
+.08
++I8
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++I8
+.08
+.08
+.08
++E8
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++I8
+.08
+.08
+.08
++I8
+.08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++I8
+.08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++08
+.08
+.08
++C8
+.C8
++C8
+.C8
+.C8
++C8
+.C8
++C8
+.C8
+.C8
++C8
+.C8
++C8
+.C8
+.C8
++08
+.08
++08
+.08
+.08
++Y8
+.08
+.08
+r 20 U
 +08
 .08
 .08
@@ -24394,7 +24760,7 @@ r 17 U
 .08
 .08
 +08
-.08
+.E8
 .08
 +08
 .08
@@ -27375,7 +27741,22 @@ r 16 U
 +08
 .08
 +08
-r 303 U
+r 288 A
+AQ
+AQ
+AI
+A
+A
+A
+A
+AQ
+AQ
+A
+A
+AQ
+A
+A
+AQ
 T
 T
 T
@@ -27396,7 +27777,8 @@ B
 B
 B
 r 32 E
-r 32768 U
+r 29882 U
+r 2886 A
 +0BD
 .0BD
 .0BD
@@ -36187,7 +36569,17 @@ U
 .081
 +081
 +081
-r 573706 U
+r 1034 U
+r 3096 A
+r 63469 U
+r 2067 A
+r 130482 U
+r 590 A
+r 252353 U
+r 9791 A
+r 91489 U
+r 6815 A
+r 12520 U
 +
 +
 .
@@ -36302,22 +36694,20 @@ r 573706 U
 +
 +
 r 81 U
-+C8
-+C8
-.C8
++G8
 +C8
 .C8
 +C8
 .C8
-.C8
-+C8
-.C8
-+C8
-.C8
-+C8
++G8
 .C8
 .C8
 +C8
+.C8
++K8
+.C8
++C8
+.C8
 .C8
 +C8
 .C8
@@ -36327,9 +36717,11 @@ r 81 U
 .C8
 +C8
 .C8
++C8
+.C8
 .C8
 +C8
-+C8
++S8
 +08
 .08
 +08
@@ -36725,7 +37117,24 @@ r 484 U
 .C8
 +C8
 +08
-r 2804428 U
+r 406344 U
+r 6020 A
+r 188841 U
+r 7767 A
+r 260668 U
+r 1476 A
+r 61136 U
+r 4400 A
+r 256480 U
+r 5664 A
+r 204784 U
+Ug
+r 751404 U
+E
+E
+E
+E
+r 649439 U
 +0B5
 .0B5
 .0B5
@@ -36802,7 +37211,7 @@ r 2804428 U
 .0BD
 +0BD
 .0BD
-+0BD
++IBD
 .0BD
 .0BD
 .0BD
@@ -37803,7 +38212,41 @@ r 41 U
 +0BE
 .0BE
 .0BE
-r 64147 U
+r 8098 U
+r 30 B0F5
+E0F5
+E0F5
+r 24 B0F5
+E0F5
+E0F5
+r 10 B0F5
+E0F5
+E0F5
+r 10 B0F5
+E0F5
+E0F5
+r 10 B0F5
+E0F5
+E0F5
+r 10 B0F5
+E0F5
+E0F5
+r 34 B0F5
+E0F5
+E0F5
+r 8 B0F5
+E0F5
+E0F5
+r 8 B0F5
+E0F5
+E0F5
+r 8 B0F5
+E0F5
+E0F5
+r 8 B0F5
+r 3664 U
+r 8 B
+r 52197 U
 +081
 +081
 +0B6
@@ -38710,7 +39153,7 @@ U
 U
 U
 U
-+0BE
++EBE
 .0BE
 +0BE
 +0BE
@@ -48883,7 +49326,7 @@ U
 .0BE
 +0BE
 +0BE
-+0BE
++0F6
 .0BE
 .0BE
 .0BE
@@ -48901,8 +49344,8 @@ U
 .0B5
 .0B5
 +0B5
-r 44 U
-+081
+r 44 E0F5
++0B5
 .081
 +081
 .081
@@ -48925,7 +49368,42 @@ r 44 U
 .081
 .081
 +081
-r 59 U
++E81
+.081
++081
+.081
+.081
++I81
+.081
++Q81
++E81
+.081
+.081
++081
+.081
+.081
++081
++081
+.081
+.081
++081
+.081
+.081
++081
+.081
++081
+.081
+.081
++081
++081
+.081
+.081
++081
+.081
+.081
++Q81
++U81
+r 24 U
 +0BE
 .0BE
 +0BE
@@ -48936,7 +49414,7 @@ r 59 U
 +0BE
 .0BE
 .0BE
-r 8 U
+r 8 E
 +0BE
 .0BE
 +0BE
@@ -62506,7 +62984,7 @@ r 8 U
 +C8
 .C8
 +08
-+08
++E8
 .08
 .08
 .08
@@ -64217,7 +64695,7 @@ r 29 U
 +08
 .08
 .08
-+08
++I8
 .08
 .08
 .08
@@ -64284,7 +64762,7 @@ r 29 U
 .08
 .08
 +08
-U
++Q8
 +08
 +08
 .08
@@ -65526,12 +66004,12 @@ r 178 U
 .08
 .08
 .08
-+08
++0F8
 .08
 .08
-+I8
-.08
-.08
++IF8
+.0F8
+.0F8
 +08
 .08
 .08
@@ -65736,7 +66214,7 @@ r 33 T
 .
 .
 +
-+
++0F8
 .
 .
 +
@@ -65753,7 +66231,7 @@ r 33 T
 +
 .
 .
-+
++0F8
 .
 .
 +
@@ -65761,7 +66239,7 @@ r 33 T
 +
 +
 .
-+
++0F8
 .
 .
 +
@@ -65809,8 +66287,8 @@ r 33 T
 +I
 .
 +Q
-r 126 U
-+0B8
+r 126 B0F8
++IB8
 .0B8
 .0B8
 .0B8
@@ -65948,7 +66426,7 @@ r 269 U
 .
 +
 +
-+
++0F8
 .
 .
 .
@@ -65965,8 +66443,8 @@ r 269 U
 .
 +
 +Q
-Ug
-r 31 U
+BgF8
+r 31 B0F8
 +08
 +08
 +08
@@ -71953,31 +72431,31 @@ r 8 U
 +C8
 .C8
 +08
-+08
++E8
 .08
 .08
 +08
 .08
 .08
-+08
++I8
 .08
 +08
 .08
 .08
 +08
 +08
-+08
-.08
++C8
+.C8
 +C8
 .C8
 .C8
-+C8
++K8
 .C8
 .C8
-.C8
-+C8
 .C8
 +08
+.08
++U8
 +0B9
 .0B9
 .0B9
@@ -72688,17 +73166,11 @@ r 88 U
 .08
 +08
 r 1347 U
-+08
++M8
 .08
 .08
-+08
-+08
-.08
-.08
-+08
-.08
-.08
-+08
++Q8
++E8
 .08
 .08
 +08
@@ -72706,9 +73178,10 @@ r 1347 U
 .08
 +08
 .08
-+D8
-.D8
-.D8
+.08
++08
+.08
+.08
 +D8
 .D8
 +D8
@@ -72716,7 +73189,12 @@ r 1347 U
 .D8
 +D8
 .D8
++D8
+.D8
+.D8
 +08
+.08
++Q8
 +0B9
 .0B9
 .0B9
@@ -72756,7 +73234,7 @@ r 1347 U
 +CB9
 .CB9
 +0B9
-+08
++E8
 .08
 .08
 +08
@@ -72771,17 +73249,8 @@ r 1347 U
 .08
 +08
 .08
-.08
-+08
 .08
 +C8
-.C8
-+C8
-.C8
-.C8
-+C8
-+C8
-.C8
 .C8
 +C8
 .C8
@@ -72789,8 +73258,17 @@ r 1347 U
 .C8
 .C8
 +C8
++C8
+.C8
+.C8
++C8
+.C8
++C8
+.C8
 .C8
 +08
+.08
++Q8
 r 2760 U
 +08
 +08
@@ -77240,7 +77718,7 @@ U
 .0BE
 +0BE
 r 70 U
-+0B8
++EB8
 .0B8
 .0B8
 +0B8
@@ -79419,10 +79897,10 @@ U
 .0B5
 .0B5
 +0B5
-+0BD
++EBD
 .0BD
 .0BD
-+0BD
++
 .0BD
 .0BD
 +0BD
@@ -79511,7 +79989,7 @@ U
 .0B5
 .0B5
 +0B5
-+0BD
++EBD
 .0BD
 .0BD
 +0BD
@@ -79592,7 +80070,7 @@ U
 .0BD
 +0BD
 U
-+0BD
++MBD
 .0BD
 .0BD
 +0BD
@@ -79601,7 +80079,7 @@ U
 .0BD
 .0BD
 +0BD
-+0BD
++IBD
 .0BD
 .0BD
 +0BD
@@ -89862,8 +90340,491 @@ U
 +0BD
 .0BD
 .0BD
-r 484 U
-+0B6
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
+E0FF
+E0FF
+B0FF
+B0FF
++YB6
 .0B6
 .0B6
 .0B6
@@ -89975,7 +90936,14 @@ r 484 U
 .0BD
 .0BD
 .0BD
-r 8 U
++YBD
+.0BD
+.0BD
+.0BD
++YBD
+.0BD
+.0BD
+.0BD
 +081
 .081
 .081
@@ -103527,7 +104495,7 @@ U
 .081
 .081
 +081
-r 380 U
+r 380 E0FF
 +0BD
 .0BD
 .0BD
@@ -103547,8 +104515,42 @@ r 380 U
 .0BD
 +0BD
 .0BD
-r 35 U
 +0BD
+.0BD
+.0BD
++0BD
+.0BD
+.0BD
++0BD
+.0BD
+.0BD
++0BD
+.0BD
+.0BD
++0BD
++0BD
+.0BD
+.0BD
++0BD
+.0BD
+.0BD
++0BD
++IBD
+.0BD
+.0BD
++0BD
++0BD
+.0BD
+.0BD
++0BD
++0BD
+.0BD
+.0BD
++0BD
+.0BD
+.0BD
++QBD
++EBD
 .0BD
 .0BD
 +0BD

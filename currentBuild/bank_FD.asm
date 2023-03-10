@@ -8150,7 +8150,7 @@ ReptileRumble_Bonus1_Data: dw $0001,$6A7D,$01C0,$E5A3           ;FD846C|        
                                                             ;      |        |      ;  
           CODE_FDF346: LDY.W #$001C                         ;FDF346|A01C00  |      ;  
                                                             ;      |        |      ;  
-          CODE_FDF349: LDA.W $1A6F,Y                        ;FDF349|B96F1A  |BD1A6F;  
+          CODE_FDF349: LDA.W $1A6F,Y                        ;FDF349|B96F1A  |001A6F; WRAM read 
                        BEQ CODE_FDF357                      ;FDF34C|F009    |FDF357;  
                        DEY                                  ;FDF34E|88      |      ;  
                        DEY                                  ;FDF34F|88      |      ;  
@@ -8203,10 +8203,10 @@ ReptileRumble_Bonus1_Data: dw $0001,$6A7D,$01C0,$E5A3           ;FD846C|        
                        LDA.W #$0000                         ;FDF397|A90000  |      ;  
                        STA.W $1A6F,Y                        ;FDF39A|996F1A  |811A6F;  
                        RTS                                  ;FDF39D|60      |      ;  
-                       JSR.W CODE_FDF3A2                    ;FDF39E|20A2F3  |FDF3A2;  
+                       JSR.W check4EmtyIDSlot               ;FDF39E|20A2F3  |FDF3A2;  
                        RTL                                  ;FDF3A1|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_FDF3A2: LDX.W #$0002                         ;FDF3A2|A20200  |      ;  
+     check4EmtyIDSlot: LDX.W #$0002                         ;FDF3A2|A20200  |      ;  
                                                             ;      |        |      ;  
           CODE_FDF3A5: LDA.W $0D45,X                        ;FDF3A5|BD450D  |BD0D45;  
                        BEQ CODE_FDF3B5                      ;FDF3A8|F00B    |FDF3B5;  
@@ -8244,7 +8244,7 @@ ReptileRumble_Bonus1_Data: dw $0001,$6A7D,$01C0,$E5A3           ;FD846C|        
                        CLC                                  ;FDF3DE|18      |      ;  
                        RTS                                  ;FDF3DF|60      |      ;  
                        STA.B $4C                            ;FDF3E0|854C    |00004C;  
-                       JSR.W CODE_FDF3A2                    ;FDF3E2|20A2F3  |FDF3A2;  
+                       JSR.W check4EmtyIDSlot               ;FDF3E2|20A2F3  |FDF3A2;  
                        BCS UNREACH_FDF3F2                   ;FDF3E5|B00B    |FDF3F2;  
                        STZ.W $0AE5,X                        ;FDF3E7|9EE50A  |BD0AE5;  
                        PHY                                  ;FDF3EA|5A      |      ;  
@@ -8254,7 +8254,7 @@ ReptileRumble_Bonus1_Data: dw $0001,$6A7D,$01C0,$E5A3           ;FD846C|        
                        RTL                                  ;FDF3F1|6B      |      ;  
                                                             ;      |        |      ;  
        UNREACH_FDF3F2: db $6B                               ;FDF3F2|        |      ;  
-                       JSR.W CODE_FDF3A2                    ;FDF3F3|20A2F3  |FDF3A2;  
+                       JSR.W check4EmtyIDSlot               ;FDF3F3|20A2F3  |FDF3A2;  
                        BCS CODE_FDF403                      ;FDF3F6|B00B    |FDF403;  
                        STZ.W $0AE5,X                        ;FDF3F8|9EE50A  |BD0AE5;  
                        PHY                                  ;FDF3FB|5A      |      ;  
@@ -9126,7 +9126,7 @@ ReptileRumble_Bonus1_Data: dw $0001,$6A7D,$01C0,$E5A3           ;FD846C|        
                        LDA.W $192B,X                        ;FDFB28|BD2B19  |BD192B;  
                        AND.W #$00FF                         ;FDFB2B|29FF00  |      ;  
                        BNE CODE_FDFB6E                      ;FDFB2E|D03E    |FDFB6E;  
-                       JSR.W CODE_FDF3A2                    ;FDFB30|20A2F3  |FDF3A2;  
+                       JSR.W check4EmtyIDSlot               ;FDFB30|20A2F3  |FDF3A2;  
                        BCS CODE_FDFB6E                      ;FDFB33|B039    |FDFB6E;  
                        LDX.B $A4                            ;FDFB35|A6A4    |0000A4;  
                        LDA.B $86                            ;FDFB37|A586    |000086;  
@@ -9195,7 +9195,7 @@ ReptileRumble_Bonus1_Data: dw $0001,$6A7D,$01C0,$E5A3           ;FD846C|        
                                                             ;      |        |      ;  
           CODE_FDFBBA: CMP.W $0002,Y                        ;FDFBBA|D90200  |BD0002;  
                        BCS CODE_FDFB74                      ;FDFBBD|B0B5    |FDFB74;  
-                       JSR.W CODE_FDF3A2                    ;FDFBBF|20A2F3  |FDF3A2;  
+                       JSR.W check4EmtyIDSlot               ;FDFBBF|20A2F3  |FDF3A2;  
                        BCS CODE_FDFB74                      ;FDFBC2|B0B0    |FDFB74;  
                        LDA.W #$0044                         ;FDFBC4|A94400  |      ;  
                        STA.W $0D45,X                        ;FDFBC7|9D450D  |BD0D45;  

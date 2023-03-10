@@ -6061,7 +6061,7 @@
                        LDX.B rOAMIndex                      ;FBAB1F|A68E    |00008E;  
                        CLC                                  ;FBAB21|18      |      ;  
                                                             ;      |        |      ;  
-          CODE_FBAB22: DEC.B $50                            ;FBAB22|C650    |000050;  
+        OAM_DrawTable: DEC.B $50                            ;FBAB22|C650    |000050;  
                        BMI CODE_FBAB80                      ;FBAB24|305A    |FBAB80;  
                        LDA.B [$5E],Y                        ;FBAB26|B75E    |00005E;  
                        REP #$20                             ;FBAB28|C220    |      ;  
@@ -6115,7 +6115,7 @@
                        SEP #$20                             ;FBAB7A|E220    |      ;  
                        INY                                  ;FBAB7C|C8      |      ;  
                        INY                                  ;FBAB7D|C8      |      ;  
-                       BRA CODE_FBAB22                      ;FBAB7E|80A2    |FBAB22;  
+                       BRA OAM_DrawTable                    ;FBAB7E|80A2    |FBAB22;  
                                                             ;      |        |      ;  
           CODE_FBAB80: REP #$20                             ;FBAB80|C220    |      ;  
                        TXA                                  ;FBAB82|8A      |      ;  
